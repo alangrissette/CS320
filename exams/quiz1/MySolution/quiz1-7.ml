@@ -9,9 +9,13 @@
    function so that isPrime returns true for prime
    number inputs and false otherwise. *)
 
-let isPrime(n) =
-  let test(i:int): bool = (* YOUR CODE *)
+llet isPrime n =
+  let is_divisible x = n mod x = 0 in
+  let test i =
+    if i <= 1 then false
+    else not (int1_forall (i - 1) is_divisible)
   in
-  if n < 2 then false else int1_forall(n)(test)
+  if n < 2 then false
+  else int1_forall n test
 
 (* ************************************************ *)
